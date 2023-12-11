@@ -45,7 +45,7 @@ server {
     error_log /var/log/nginx/${SERVER_NAME}_error.log;
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri/ /index.php?$args;
     }
 
     # PHP configurations
